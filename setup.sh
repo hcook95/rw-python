@@ -16,4 +16,4 @@ then
     wget https://github.com/Xilinx/RapidWright/releases/download/v2022.1.1-beta/rapidwright-2022.1.1-standalone-lin64.jar
 fi
 
-python -i rapidwright.py
+# python -i rapidwright.py
