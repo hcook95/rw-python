@@ -1,25 +1,25 @@
 # RapidWright Python
-This repository is used as a simple way to get started using RapidWright via Python3. 
+This repository provides a simple way to get started using RapidWright via Python3. 
 
 RapidWright is written in Java, and as such is normally used in Java environments. 
 However, setting up the RapidWright environment in Java can be cumbersome. 
-Additionally many people (especially those first getting started with RapidWright) perfer Python to java, thus the makers of RapidWright have come out with a way to use the RapidWright API in a Python3 environment using JPype1.
+Additionally many people (especially those first getting started with RapidWright) prefer Python to java, thus the makers of RapidWright have come out with a way to use the RapidWright API in a Python3 environment using JPype1.
 The JPype1 Python library exposes Java APIs to Python as if they were native.
 
-This repository packages the setup instrunctions found [here](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) into setup.py for convenience.
-In addition, this repo contains a few tutorials written in Python to help new Python users get started.
+This repository packages the setup instructions found [here](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) into a setup.sh script for convenience.
+In addition, this repository contains a few tutorials written in Python3 to help new users get started.
 
 ## Getting Started
 
-To setup the RapidWright environment, run `source setup.sh`.
-The first time this script is ran, it will download, install, and setup everything needed for the RapidWright environment.
-After the environment has been setup, one can enter the associated Python environment by running `source activate` in the top directory of the repository, however this is not reccomended.
-Instead, it is recommended to recommended to run `source setup.sh` again, as this will also setup the necessary bash variables that are used by RapidWright's router.
+Before getting started with this 
+
+To setup the RapidWright environment, run `source setup.sh`, which will download, install, and setup everything needed for the RapidWright environment.
+After the environment has been setup, one can enter the associated Python environment by running `source venv/bin/activate`.
 
 As the [RapidWright for Python Instructions](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) state, you can run rapidwright.py in interactive mode by running `python -i rapidwright.py`.
 This allows you to explore the various APIs. In addition, running this script in interactive mode will allow you to use tab-complete on the RapidWright Java Classes.
 
-for example, after instatiating a AWS_F1 device with `device = Device.getDevice(Device.AWS_F1)`, one can tab complete `device.` to get the following:
+for example, after instantiating a AWS_F1 device with `device = Device.getDevice(Device.AWS_F1)`, one can tab complete `device.` to get the following:
 ```
 >>> device.
 device.AWS_F1                         device.getClass(                      device.getSLRByConfigOrderIndex(
@@ -46,4 +46,36 @@ device.getAvailableDevices(           device.getSLR(
 ```
 
 ## Tutorials
-Coming soon...
+
+### numOfMemLUTs
+This tutorial shows how to use RapidWright to extract some basic
+information of a device. While this example can be easily replicated
+in Vivado using a couple tcl commands, it is often desirable to use 
+RapidWright to get device information for the performance advantage
+and ease of post processing in languages such as Java or Python.
+
+### netSizes
+This tutorial shows how to use RapidWright to extract some basic
+information of a design. It also does some post-processing (plotting
+the info in matplotlib) to show some of the advantages of using
+RapidWright with Python.
+
+### basicCircuit
+This tutorial shows how to make a simple design in RapidWright. Note
+that this tutorial outputs a .dcp file. To get a bitstream one must
+open the resulting .dcp file in Vivado and use the 'write_bitstream'
+command.
+
+This tutorial is based on Lesson1 of the RapidWright tutorial found
+here: https://github.com/Xilinx/RapidWright/blob/master/src/com/xilinx/rapidwright/examples/Lesson1.java
+
+### rwroute
+RWRoute is a new open-source router written in RapidWright.
+It provides a substantial speedup to routing when
+compared to Vivado's router, with the sacrifice of timing.
+This may be useful for applications such as quick design iterations.
+
+This program not as much of a tutorial as much as it is a simple wrapper over RWRouter. To use
+simply run 'python rwroute <input.dcp> <output.dcp>'.
+Note that RWRoute currently only works with UltraScale+
+devices.
