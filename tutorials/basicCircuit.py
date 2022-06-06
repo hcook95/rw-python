@@ -15,7 +15,6 @@ from jpype.types import *
 import os
 
 fileDir = os.path.dirname(os.path.realpath(__file__))
-print(fileDir)
 os.chdir(fileDir+"/..")
 
 jpype.startJVM(classpath=["rapidwright-2022.1.1-standalone-lin64.jar"])
