@@ -44,23 +44,35 @@ device.getArchitecture(               device.getRows(                       devi
 device.getAvailableDevices(           device.getSLR(
 >>> device.
 ```
+It can also be helpful when using RapidWright to refer to the [RapidWright JavaDocs](https://www.rapidwright.io/javadoc/).
 
 ## Tutorials
+There are four tutorials found in the tutorials directory. 
+These tutorials focus on four potential use cases of RapidWright. 
+These use cases are: 
+- Using RapidWright to extract information of a device.
+- Using RapidWright to extract information of a design.
+- Using RapidWright to create a design from scratch.
+- Using RapidWright to route a design.
 
-### numOfMemLUTs
+These tutorials are meant to be simple and straight forward. 
+They do not represent everything that RapidWright can be used for.
+Additional, more advanced tutorials can be found [here](https://www.rapidwright.io/docs/Tutorials.html). These additional tutorials are mostly written for the java version of RapidWright, and so additional work may be required to do them in Python.
+
+### numOfMemLUTs (Device Info)
 This tutorial shows how to use RapidWright to extract some basic
 information of a device. While this example can be easily replicated
 in Vivado using a couple tcl commands, it is often desirable to use 
 RapidWright to get device information for the performance advantage
 and ease of post processing in languages such as Java or Python.
 
-### netSizes
+### netSizes (Design Info)
 This tutorial shows how to use RapidWright to extract some basic
 information of a design. It also does some post-processing (plotting
 the info in matplotlib) to show some of the advantages of using
 RapidWright with Python.
 
-### basicCircuit
+###  basicCircuit (Design Creation)
 This tutorial shows how to make a simple design in RapidWright. Note
 that this tutorial outputs a .dcp file. To get a bitstream one must
 open the resulting .dcp file in Vivado and use the 'write_bitstream'
@@ -69,13 +81,18 @@ command.
 This tutorial is based on Lesson1 of the RapidWright tutorial found
 here: https://github.com/Xilinx/RapidWright/blob/master/src/com/xilinx/rapidwright/examples/Lesson1.java
 
-### rwroute
-RWRoute is a new open-source router written in RapidWright.
+### rwroute (Design Router)
+RWRoute is a new open-source, timing-based router written in RapidWright.
 It provides a substantial speedup to routing when
-compared to Vivado's router, with the sacrifice of timing.
+compared to Vivado's router, with a sacrifice in the critical path delay.
 This may be useful for applications such as quick design iterations.
 
-This program not as much of a tutorial as much as it is a simple wrapper over RWRouter. To use
+This program not as much of a tutorial as much as it 
+is a simple wrapper over the RWRouter main function. To use
 simply run 'python rwroute <input.dcp> <output.dcp>'.
 Note that RWRoute currently only works with UltraScale+
 devices.
+
+This file also contains the code of RWRoute.main() converted from Java into Python.
+This code is commented out, and can be used to understand and manipulate the main
+function of RWRoute.
