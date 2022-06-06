@@ -9,3 +9,4 @@ activate
 *.jar
 data/
 routeThrus
+.vscode
