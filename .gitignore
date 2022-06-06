@@ -1,0 +1,11 @@
+*.jou
+*.log
+*hd_visual/
+*.Xil/
+*usage_statistics_webtalk*
+*.dcp
+venv
+activate
+*.jar
+data/
+routeThrus

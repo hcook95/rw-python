@@ -13,8 +13,9 @@ In addition, this repository contains a few tutorials written in Python3 to help
 
 Before getting started with this repository, it is highly recommended to familiarize yourself with the [RapidWright Documentation](https://www.rapidwright.io/docs/), particularly the introduction through the "Implementation Basics" section.
 
-To setup the RapidWright Python environment, run `source setup.sh`, which will download, install, and setup everything needed for the RapidWright environment.
-After the environment has been setup, one can enter the associated Python environment by running `source venv/bin/activate`.
+To setup the RapidWright Python environment, run `make` in the top directory.
+This will download, install, and setup everything needed for the RapidWright environment.
+After the environment has been setup, one can enter the associated Python environment by running `source activate` and leave the environment by running `deactivate`.
 
 As the [RapidWright for Python Instructions](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) state, you can run rapidwright.py in interactive mode by running `python -i rapidwright.py`.
 This allows you to explore the various APIs. In addition, running this script in interactive mode will allow you to use tab-complete on the RapidWright Java Classes.

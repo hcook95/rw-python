@@ -1,13 +1,19 @@
 """
-RWRoute is a new open-source router written in RapidWright.
-It provides a substantial speedup to routing when compared
-to Vivado's router, with the sacrifice of timing.This may
-be useful for applications such as quick design iterations.
+RWRoute is a new open-source, timing-based router written
+in RapidWright. It provides a substantial speedup to routing 
+when compared to Vivado's router, with a sacrifice in the 
+critical path delay. This may be useful for applications such 
+as quick design iterations.
 
-This program is a simple wrapper over RWRouter. To use
+This program not as much of a tutorial as much as it 
+is a simple wrapper over the RWRouter main function. To use
 simply run 'python rwroute <input.dcp> <output.dcp>'.
 Note that RWRoute currently only works with UltraScale+
 devices.
+
+This file also contains the code of RWRoute.main() converted 
+from Java into Python. This code is commented out, and can be 
+used to understand and manipulate the main function of RWRoute.
 """
 from os import RWF_HIPRI
 import sys
