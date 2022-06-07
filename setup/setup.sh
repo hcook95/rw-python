@@ -1,6 +1,6 @@
 if [ $(dpkg-query -W -f='${Status}' python3-venv 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
-  sudo apt install python3-venv;
+  sudo apt install -y python3-venv;
 fi
 
 if [ ! -d "venv" ]
