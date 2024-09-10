@@ -1,13 +1,16 @@
-# RapidWright Python
-This repository provides a simple way to get started using RapidWright via Python3. 
+# DEPRICATED!!!
+For the last while, the RapidWright team has made RapidWright installable in python3 with a simple `pip install rapidwright` (see [](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) for more details). This means this repository is no longer a convenient way to install RapidWright in Python. However, I am leaving it up for posterity's sake, and in case the examples are helpful for anyone.
 
-RapidWright is written in Java, and as such is normally used in Java environments. 
-However, setting up the RapidWright environment in Java can be cumbersome. 
-Additionally many people (especially those first getting started with RapidWright) prefer Python to java, thus the makers of RapidWright have come out with a way to use the RapidWright API in a Python3 environment using JPype1.
-The JPype1 Python library exposes Java APIs to Python as if they were native.
+# ~~RapidWright Python~~
+~~This repository provides a simple way to get started using RapidWright via Python3.~~
 
-This repository packages the setup instructions found [here](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) into a setup.sh script for convenience.
-In addition, this repository contains a few tutorials written in Python3 to help new users get started.
+~~RapidWright is written in Java, and as such is normally used in Java environments.~~
+~~However, setting up the RapidWright environment in Java can be cumbersome.~~
+~~Additionally many people (especially those first getting started with RapidWright) prefer Python to java, thus the makers of RapidWright have come out with a way to use the RapidWright API in a Python3 environment using JPype1.~~
+~~The JPype1 Python library exposes Java APIs to Python as if they were native.~~
+
+~~This repository packages the setup instructions found [here](https://www.rapidwright.io/docs/Install_RapidWright_as_a_Python_PIP_Package.html) into a setup.sh script for convenience.~~
+~~In addition, this repository contains a few tutorials written in Python3 to help new users get started.~~
 
 ## Getting Started
 
